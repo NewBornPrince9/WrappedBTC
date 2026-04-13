@@ -12,6 +12,22 @@
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
+        .chart-container {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+            height: 0;
+            overflow: hidden;
+            max-width: 100%;
+        }
+        .chart-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+            border-radius: 12px;
+        }
     </style>
 </head>
 <body class="bg-gray-900 text-white font-sans leading-normal tracking-normal">
@@ -21,7 +37,11 @@
             <i class="fab fa-bitcoin text-orange-500 mr-2"></i>
             <span>Wrapped<span class="text-orange-500">BTC</span></span>
         </div>
-        <div class="flex items-center space-x-4">
+        <div class="flex items-center space-x-6">
+            <div class="hidden md:flex space-x-4 text-xl">
+                <a href="https://x.com/Wbtc_Official" target="_blank" class="hover:text-orange-500 transition"><i class="fab fa-x-twitter"></i></a>
+                <a href="https://t.me/WrappedBTC_Official" target="_blank" class="hover:text-orange-500 transition"><i class="fab fa-telegram"></i></a>
+            </div>
             <select id="langSwitcher" class="bg-gray-800 text-sm border border-gray-700 rounded px-2 py-1 focus:outline-none">
                 <option value="en">English</option>
                 <option value="id">Indonesia</option>
@@ -30,16 +50,34 @@
         </div>
     </nav>
 
-    <header class="container mx-auto text-center py-20 px-6">
+    <header class="container mx-auto text-center py-16 px-6">
         <h1 id="hero-title" class="text-5xl md:text-6xl font-extrabold mb-6">
             The Secure Way to Hold <br><span class="gradient-text">Bitcoin on BSC</span>
         </h1>
         <p id="hero-desc" class="text-gray-400 text-xl mb-10 max-w-2xl mx-auto">
             Token Wrapped BTC (WBTC) is a 1:1 Bitcoin-backed asset designed for seamless DeFi integration and high-speed trading.
         </p>
+        
+        <div class="max-w-5xl mx-auto mb-12">
+            <h2 id="chart-heading" class="text-xl font-bold mb-4 text-left flex items-center">
+                <i class="fas fa-chart-line text-green-500 mr-2"></i> Live Market Data (GeckoTerminal)
+            </h2>
+            <div class="chart-container shadow-2xl">
+                <iframe 
+                    height="100%" 
+                    width="100%" 
+                    id="geckoterminal-embed" 
+                    title="GeckoTerminal Embed" 
+                    src="https://www.geckoterminal.com/bsc/pools/0x108c8c281b39e14417ee8c40bf426a63df0247ce?embed=1&info=0&swaps=1" 
+                    allow="clipboard-write" 
+                    allowfullscreen>
+                </iframe>
+            </div>
+        </div>
+
         <div class="flex justify-center space-x-4">
-            <button id="btn-trade" class="bg-white text-gray-900 px-8 py-3 rounded-full font-bold hover:bg-gray-200">Trade Now</button>
-            <button id="btn-docs" class="border border-gray-600 px-8 py-3 rounded-full font-bold hover:bg-gray-800">Documentation</button>
+            <a href="https://www.geckoterminal.com/bsc/pools/0x108c8c281b39e14417ee8c40bf426a63df0247ce" target="_blank" id="btn-trade" class="bg-white text-gray-900 px-8 py-3 rounded-full font-bold hover:bg-gray-200">Trade Now</a>
+            <a href="https://github.com/NewBornPrince9/WrappedBTC" target="_blank" id="btn-docs" class="border border-gray-600 px-8 py-3 rounded-full font-bold hover:bg-gray-800">Documentation</a>
         </div>
     </header>
 
@@ -64,29 +102,33 @@
         <h2 id="feat-title" class="text-3xl font-bold text-center mb-12">Core Features</h2>
         <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             <div class="text-center">
-                <div class="bg-orange-500 w-12 h-12 rounded-lg flex items-center justify-center mx-auto mb-4 italic font-bold">T</div>
+                <div class="bg-orange-500 w-12 h-12 rounded-lg flex items-center justify-center mx-auto mb-4 italic font-bold text-xl">T</div>
                 <h4 id="feat-1-h" class="font-bold mb-2">Transferable</h4>
                 <p id="feat-1-p" class="text-gray-400 text-sm">Full BEP-20 compatibility for fast wallet transfers.</p>
             </div>
             <div class="text-center">
-                <div class="bg-blue-500 w-12 h-12 rounded-lg flex items-center justify-center mx-auto mb-4 italic font-bold">W</div>
+                <div class="bg-blue-500 w-12 h-12 rounded-lg flex items-center justify-center mx-auto mb-4 italic font-bold text-xl">W</div>
                 <h4 id="feat-2-h" class="font-bold mb-2">Withdrawable</h4>
                 <p id="feat-2-p" class="text-gray-400 text-sm">Easy burn-to-withdraw mechanism to get real BTC.</p>
             </div>
             <div class="text-center">
-                <div class="bg-green-500 w-12 h-12 rounded-lg flex items-center justify-center mx-auto mb-4 italic font-bold">V</div>
+                <div class="bg-green-500 w-12 h-12 rounded-lg flex items-center justify-center mx-auto mb-4 italic font-bold text-xl">V</div>
                 <h4 id="feat-3-h" class="font-bold mb-2">Valuable</h4>
                 <p id="feat-3-p" class="text-gray-400 text-sm">Backed by verified BTC reserves for price stability.</p>
             </div>
             <div class="text-center">
-                <div class="bg-purple-500 w-12 h-12 rounded-lg flex items-center justify-center mx-auto mb-4 italic font-bold">A</div>
+                <div class="bg-purple-500 w-12 h-12 rounded-lg flex items-center justify-center mx-auto mb-4 italic font-bold text-xl">A</div>
                 <h4 id="feat-4-h" class="font-bold mb-2">Accessible</h4>
                 <p id="feat-4-p" class="text-gray-400 text-sm">Open for anyone to integrate via Offchain Market.</p>
             </div>
         </div>
     </section>
 
-    <footer class="border-t border-gray-800 py-10 text-center text-gray-500">
+    <footer class="border-t border-gray-800 py-10 text-center text-gray-500 px-6">
+        <div class="flex justify-center space-x-6 mb-6 text-2xl">
+            <a href="https://x.com/Wbtc_Official" target="_blank" class="hover:text-white transition"><i class="fab fa-x-twitter"></i></a>
+            <a href="https://t.me/WrappedBTC_Official" target="_blank" class="hover:text-white transition"><i class="fab fa-telegram"></i></a>
+        </div>
         <p>&copy; 2026 Token Wrapped BTC Project. Powered by Offchain Market.</p>
         <p class="text-xs mt-2">Contract: 0x25e636B21Db00541a3646A2732e08c190d862B00</p>
     </footer>
@@ -96,6 +138,7 @@
             en: {
                 heroTitle: "The Secure Way to Hold <br><span class='gradient-text'>Bitcoin on BSC</span>",
                 heroDesc: "Token Wrapped BTC (WBTC) is a 1:1 Bitcoin-backed asset designed for seamless DeFi integration and high-speed trading.",
+                chartH: "<i class='fas fa-chart-line text-green-500 mr-2'></i> Live Market Data (GeckoTerminal)",
                 btnTrade: "Trade Now",
                 btnDocs: "Documentation",
                 featTitle: "Core Features",
@@ -107,6 +150,7 @@
             id: {
                 heroTitle: "Cara Aman Menyimpan <br><span class='gradient-text'>Bitcoin di BSC</span>",
                 heroDesc: "Token Wrapped BTC (WBTC) adalah aset yang didukung BTC 1:1, dirancang untuk integrasi DeFi dan perdagangan cepat.",
+                chartH: "<i class='fas fa-chart-line text-green-500 mr-2'></i> Data Pasar Langsung (GeckoTerminal)",
                 btnTrade: "Mulai Trading",
                 btnDocs: "Dokumentasi",
                 featTitle: "Fitur Utama",
@@ -121,6 +165,7 @@
             const lang = e.target.value;
             document.getElementById('hero-title').innerHTML = content[lang].heroTitle;
             document.getElementById('hero-desc').innerText = content[lang].heroDesc;
+            document.getElementById('chart-heading').innerHTML = content[lang].chartH;
             document.getElementById('btn-trade').innerText = content[lang].btnTrade;
             document.getElementById('btn-docs').innerText = content[lang].btnDocs;
             document.getElementById('feat-title').innerText = content[lang].featTitle;
