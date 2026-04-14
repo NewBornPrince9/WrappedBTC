@@ -3,161 +3,162 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Token Wrapped BTC | Official Website</title>
+    <title>Token Wrapped BTC | 1:1 Bitcoin-Backed Asset</title>
+    <link rel="icon" href="https://cryptologos.cc/logos/bitcoin-btc-logo.png?v=024" type="image/png">
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        .gradient-text {
-            background: linear-gradient(90deg, #F7931A, #FFAB40);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-        .chart-container {
-            position: relative;
-            padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
-            height: 0;
-            overflow: hidden;
-            max-width: 100%;
-        }
-        .chart-container iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            border: none;
-            border-radius: 12px;
-        }
+        .gradient-text { background: linear-gradient(90deg, #F7931A, #FFAB40); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .chart-container { position: relative; padding-bottom: 50%; height: 0; overflow: hidden; border-radius: 16px; border: 1px solid #374151; }
+        .chart-container iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+        .glass-card { background: rgba(31, 41, 55, 0.7); backdrop-filter: blur(10px); border: 1px solid rgba(247, 147, 26, 0.2); }
     </style>
 </head>
-<body class="bg-gray-900 text-white font-sans leading-normal tracking-normal">
+<body class="bg-gray-900 text-white font-sans antialiased">
 
-    <nav class="flex items-center justify-between p-6 container mx-auto">
-        <div class="text-2xl font-bold flex items-center">
-            <i class="fab fa-bitcoin text-orange-500 mr-2"></i>
-            <span>Wrapped<span class="text-orange-500">BTC</span></span>
-        </div>
-        <div class="flex items-center space-x-6">
-            <div class="hidden md:flex space-x-4 text-xl">
-                <a href="https://x.com/Wbtc_Official" target="_blank" class="hover:text-orange-500 transition"><i class="fab fa-x-twitter"></i></a>
-                <a href="https://t.me/WrappedBTC_Official" target="_blank" class="hover:text-orange-500 transition"><i class="fab fa-telegram"></i></a>
+    <nav class="sticky top-0 z-50 bg-gray-900/80 backdrop-blur-md border-b border-gray-800">
+        <div class="container mx-auto px-6 py-4 flex items-center justify-between">
+            <div class="flex items-center space-x-2">
+                <img src="https://cryptologos.cc/logos/bitcoin-btc-logo.png" width="32" alt="Logo">
+                <span class="text-xl font-bold tracking-tighter">Wrapped<span class="text-orange-500">BTC</span></span>
             </div>
-            <select id="langSwitcher" class="bg-gray-800 text-sm border border-gray-700 rounded px-2 py-1 focus:outline-none">
-                <option value="en">English</option>
-                <option value="id">Indonesia</option>
-            </select>
-            <a href="https://bscscan.com/token/0x25e636B21Db00541a3646A2732e08c190d862B00" target="_blank" class="bg-orange-500 hover:bg-orange-600 px-4 py-2 rounded-full font-bold transition duration-300">BscScan</a>
+            <div class="flex items-center space-x-6">
+                <div class="hidden md:flex space-x-4 text-gray-400">
+                    <a href="https://t.me/WrappedBTC_Official" target="_blank" class="hover:text-orange-500 transition"><i class="fab fa-telegram"></i></a>
+                    <a href="https://x.com/Wbtc_Official" target="_blank" class="hover:text-orange-500 transition"><i class="fab fa-x-twitter"></i></a>
+                </div>
+                <select id="langSwitcher" class="bg-gray-800 text-xs font-bold border border-gray-700 rounded-md px-2 py-1 focus:outline-none">
+                    <option value="en">ENGLISH</option>
+                    <option value="id">INDONESIA</option>
+                </select>
+                <a href="https://bscscan.com/token/0x25e636B21Db00541a3646A2732e08c190d862B00" target="_blank" class="bg-orange-500 hover:bg-orange-600 px-5 py-2 rounded-full text-sm font-bold transition shadow-lg shadow-orange-500/20">BscScan</a>
+            </div>
         </div>
     </nav>
 
+    <div class="container mx-auto px-6 pt-10">
+        <div class="w-full rounded-3xl overflow-hidden shadow-2xl border border-gray-800">
+            <svg viewBox="0 0 1200 300" xmlns="http://www.w3.org/2000/svg" class="w-full h-auto">
+                <rect width="1200" height="300" fill="#0f172a"/>
+                <circle cx="1000" cy="50" r="150" fill="#f7931a" fill-opacity="0.05"/>
+                <text x="50" y="140" font-family="Arial" font-size="60" font-weight="bold" fill="white">Token Wrapped BTC</text>
+                <text x="50" y="190" font-family="Arial" font-size="24" fill="#94a3b8">Institutional-Grade Bitcoin Liquidity on BSC</text>
+                <rect x="50" y="220" width="480" height="40" rx="20" fill="#1e293b" stroke="#f7931a" stroke-opacity="0.4"/>
+                <text x="75" y="246" font-family="monospace" font-size="16" fill="#f7931a">0x25e636B21Db00541a3646A2732e08c190d862B00</text>
+                <circle cx="1000" cy="150" r="80" fill="#f7931a"/>
+                <path d="M1018.4 129.6C1021.8 106.8 1007.2 95.4 983.8 86.6L988.8 66.8L976.6 63.8L971.8 83.2C968.6 82.4 965.4 81.6 962.2 80.8L967 61.4L954.8 58.4L949.8 78.2C947.2 77.6 932.2 74 932.2 74L929.6 84.4L945.4 88.2C954 90.2 955.4 96.4 954.6 101.4L941 156C941.8 156.2 943.4 156.6 945 157L931.8 153.8L924 185L941.4 189.4C944.6 190.2 947.8 191 951 191.6L946 211.6L958.2 214.6L963.2 194.6C966.6 195.4 969.8 196.2 972.8 196.8L967.8 216.8L980 219.8L985 199.8C1005.8 203.8 1021.2 198.8 1026.6 180.2C1031 165.2 1026.2 156.4 1015.4 150.2C1023.2 148.4 1029 143.8 1031.2 134.2L1018.4 129.6ZM986.4 177C982.6 192.2 958.2 184.4 950.4 182.4L957.2 155.2C965 157.2 990.4 161.2 986.4 177ZM992.8 128C989.4 141.8 969 135.2 962.4 133.6L968.4 109.2C975 110.8 996.6 113.6 992.8 128Z" fill="white"/>
+            </svg>
+        </div>
+    </div>
+
     <header class="container mx-auto text-center py-16 px-6">
-        <h1 id="hero-title" class="text-5xl md:text-6xl font-extrabold mb-6">
-            The Secure Way to Hold <br><span class="gradient-text">Bitcoin on BSC</span>
+        <h1 id="hero-title" class="text-4xl md:text-6xl font-extrabold mb-6 leading-tight">
+            The Secure Bridge for <br><span class="gradient-text">Bitcoin on BNB Chain</span>
         </h1>
-        <p id="hero-desc" class="text-gray-400 text-xl mb-10 max-w-2xl mx-auto">
-            Token Wrapped BTC (WBTC) is a 1:1 Bitcoin-backed asset designed for seamless DeFi integration and high-speed trading.
+        <p id="hero-desc" class="text-gray-400 text-lg md:text-xl mb-10 max-w-3xl mx-auto">
+            Token Wrapped BTC (WBTC) is a 1:1 Bitcoin-backed asset. We combine the value of BTC with the efficiency of the BNB Smart Chain network.
         </p>
         
-        <div class="max-w-5xl mx-auto mb-12">
-            <h2 id="chart-heading" class="text-xl font-bold mb-4 text-left flex items-center">
-                <i class="fas fa-chart-line text-green-500 mr-2"></i> Live Market Data (GeckoTerminal)
-            </h2>
-            <div class="chart-container shadow-2xl">
-                <iframe 
-                    height="100%" 
-                    width="100%" 
-                    id="geckoterminal-embed" 
-                    title="GeckoTerminal Embed" 
-                    src="https://www.geckoterminal.com/bsc/pools/0x108c8c281b39e14417ee8c40bf426a63df0247ce?embed=1&info=0&swaps=1" 
-                    allow="clipboard-write" 
-                    allowfullscreen>
-                </iframe>
+        <div class="max-w-5xl mx-auto mb-16 px-4">
+            <h3 id="chart-h" class="text-left font-bold mb-4 flex items-center text-green-400">
+                <span class="relative flex h-3 w-3 mr-3">
+                    <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+                    <span class="relative inline-flex rounded-full h-3 w-3 bg-green-500"></span>
+                </span>
+                LIVE MARKET DATA
+            </h3>
+            <div class="chart-container shadow-orange-500/5 shadow-2xl">
+                <iframe src="https://www.geckoterminal.com/bsc/pools/0x108c8c281b39e14417ee8c40bf426a63df0247ce?embed=1&info=0&swaps=1" allowfullscreen></iframe>
             </div>
         </div>
 
-        <div class="flex justify-center space-x-4">
-            <a href="https://www.geckoterminal.com/bsc/pools/0x108c8c281b39e14417ee8c40bf426a63df0247ce" target="_blank" id="btn-trade" class="bg-white text-gray-900 px-8 py-3 rounded-full font-bold hover:bg-gray-200">Trade Now</a>
-            <a href="https://github.com/NewBornPrince9/WrappedBTC" target="_blank" id="btn-docs" class="border border-gray-600 px-8 py-3 rounded-full font-bold hover:bg-gray-800">Documentation</a>
+        <div class="flex flex-col md:flex-row justify-center items-center gap-4">
+            <a href="https://www.geckoterminal.com/bsc/pools/0x108c8c281b39e14417ee8c40bf426a63df0247ce" target="_blank" id="btn-trade" class="w-full md:w-auto bg-white text-black px-10 py-4 rounded-full font-bold hover:scale-105 transition transform duration-200">Trade on GeckoTerminal</a>
+            <a href="https://github.com/NewBornPrince9/WrappedBTC" target="_blank" id="btn-docs" class="w-full md:w-auto border border-gray-700 px-10 py-4 rounded-full font-bold hover:bg-gray-800 transition">GitHub Documentation</a>
         </div>
     </header>
 
-    <section class="bg-gray-800 py-16">
-        <div class="container mx-auto px-6 grid md:grid-cols-3 gap-8 text-center">
-            <div class="p-8 bg-gray-900 rounded-xl shadow-lg border border-gray-700">
-                <h3 class="text-orange-500 font-bold mb-2">Total Supply</h3>
-                <p class="text-2xl font-bold">2,000,000 WBTC</p>
+    <section class="container mx-auto px-6 mb-20">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="glass-card p-8 rounded-2xl text-center">
+                <p class="text-orange-500 text-sm font-bold uppercase tracking-widest mb-2">Total Supply</p>
+                <h2 class="text-3xl font-bold">2,000,000 WBTC</h2>
             </div>
-            <div class="p-8 bg-gray-900 rounded-xl shadow-lg border border-gray-700">
-                <h3 class="text-orange-500 font-bold mb-2">Decimals</h3>
-                <p class="text-2xl font-bold">8 (Native BTC)</p>
+            <div class="glass-card p-8 rounded-2xl text-center">
+                <p class="text-orange-500 text-sm font-bold uppercase tracking-widest mb-2">Decimals</p>
+                <h2 class="text-3xl font-bold">8 (Native BTC)</h2>
             </div>
-            <div class="p-8 bg-gray-900 rounded-xl shadow-xl border border-gray-700">
-                <h3 class="text-orange-500 font-bold mb-2">Network</h3>
-                <p class="text-2xl font-bold">BNB Smart Chain</p>
-            </div>
-        </div>
-    </section>
-
-    <section class="py-20 container mx-auto px-6">
-        <h2 id="feat-title" class="text-3xl font-bold text-center mb-12">Core Features</h2>
-        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <div class="text-center">
-                <div class="bg-orange-500 w-12 h-12 rounded-lg flex items-center justify-center mx-auto mb-4 italic font-bold text-xl">T</div>
-                <h4 id="feat-1-h" class="font-bold mb-2">Transferable</h4>
-                <p id="feat-1-p" class="text-gray-400 text-sm">Full BEP-20 compatibility for fast wallet transfers.</p>
-            </div>
-            <div class="text-center">
-                <div class="bg-blue-500 w-12 h-12 rounded-lg flex items-center justify-center mx-auto mb-4 italic font-bold text-xl">W</div>
-                <h4 id="feat-2-h" class="font-bold mb-2">Withdrawable</h4>
-                <p id="feat-2-p" class="text-gray-400 text-sm">Easy burn-to-withdraw mechanism to get real BTC.</p>
-            </div>
-            <div class="text-center">
-                <div class="bg-green-500 w-12 h-12 rounded-lg flex items-center justify-center mx-auto mb-4 italic font-bold text-xl">V</div>
-                <h4 id="feat-3-h" class="font-bold mb-2">Valuable</h4>
-                <p id="feat-3-p" class="text-gray-400 text-sm">Backed by verified BTC reserves for price stability.</p>
-            </div>
-            <div class="text-center">
-                <div class="bg-purple-500 w-12 h-12 rounded-lg flex items-center justify-center mx-auto mb-4 italic font-bold text-xl">A</div>
-                <h4 id="feat-4-h" class="font-bold mb-2">Accessible</h4>
-                <p id="feat-4-p" class="text-gray-400 text-sm">Open for anyone to integrate via Offchain Market.</p>
+            <div class="glass-card p-8 rounded-2xl text-center">
+                <p class="text-orange-500 text-sm font-bold uppercase tracking-widest mb-2">Network</p>
+                <h2 class="text-3xl font-bold">BSC (BEP-20)</h2>
             </div>
         </div>
     </section>
 
-    <footer class="border-t border-gray-800 py-10 text-center text-gray-500 px-6">
-        <div class="flex justify-center space-x-6 mb-6 text-2xl">
-            <a href="https://x.com/Wbtc_Official" target="_blank" class="hover:text-white transition"><i class="fab fa-x-twitter"></i></a>
-            <a href="https://t.me/WrappedBTC_Official" target="_blank" class="hover:text-white transition"><i class="fab fa-telegram"></i></a>
+    <section class="container mx-auto px-6 py-20 border-t border-gray-800">
+        <h2 id="feat-title" class="text-3xl font-bold text-center mb-16">Why Token Wrapped BTC?</h2>
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-12">
+            <div class="space-y-4 text-center md:text-left">
+                <div class="text-orange-500 text-3xl"><i class="fas fa-exchange-alt"></i></div>
+                <h4 id="f1h" class="text-xl font-bold">Liquid</h4>
+                <p id="f1p" class="text-gray-400 leading-relaxed">High liquidity for large-scale trading and OTC transactions via Offchain Market.</p>
+            </div>
+            <div class="space-y-4 text-center md:text-left">
+                <div class="text-blue-500 text-3xl"><i class="fas fa-shield-alt"></i></div>
+                <h4 id="f2h" class="text-xl font-bold">Secure</h4>
+                <p id="f2p" class="text-gray-400 leading-relaxed">Built on audited OpenZeppelin standards ensuring maximum safety for holders.</p>
+            </div>
+            <div class="space-y-4 text-center md:text-left">
+                <div class="text-green-500 text-3xl"><i class="fas fa-check-circle"></i></div>
+                <h4 id="f3h" class="text-xl font-bold">Verified</h4>
+                <p id="f3p" class="text-gray-400 leading-relaxed">Fully verified source code on BscScan for 100% on-chain transparency.</p>
+            </div>
+            <div class="space-y-4 text-center md:text-left">
+                <div class="text-purple-500 text-3xl"><i class="fas fa-bolt"></i></div>
+                <h4 id="f4h" class="text-xl font-bold">Low Fee</h4>
+                <p id="f4p" class="text-gray-400 leading-relaxed">Enjoy the lowest transaction fees compared to the native Bitcoin network.</p>
+            </div>
         </div>
-        <p>&copy; 2026 Token Wrapped BTC Project. Powered by Offchain Market.</p>
-        <p class="text-xs mt-2">Contract: 0x25e636B21Db00541a3646A2732e08c190d862B00</p>
+    </section>
+
+    <footer class="bg-gray-950 py-16 px-6 text-center">
+        <div class="flex justify-center space-x-8 mb-8 text-2xl">
+            <a href="https://t.me/WrappedBTC_Official" target="_blank" class="text-gray-500 hover:text-white transition"><i class="fab fa-telegram"></i></a>
+            <a href="https://x.com/Wbtc_Official" target="_blank" class="text-gray-500 hover:text-white transition"><i class="fab fa-x-twitter"></i></a>
+        </div>
+        <p class="text-gray-400 font-bold mb-2">Token Wrapped BTC &copy; 2026</p>
+        <p class="text-gray-600 text-sm mb-4">Developed by Offchain Market Team (Yahya SM & Azhar)</p>
+        <div class="inline-block bg-gray-900 px-4 py-2 rounded-lg border border-gray-800">
+            <p class="text-[10px] text-gray-500 uppercase tracking-widest mb-1">Contract Address</p>
+            <p class="text-xs font-mono text-orange-500 break-all">0x25e636B21Db00541a3646A2732e08c190d862B00</p>
+        </div>
     </footer>
 
     <script>
         const content = {
             en: {
-                heroTitle: "The Secure Way to Hold <br><span class='gradient-text'>Bitcoin on BSC</span>",
-                heroDesc: "Token Wrapped BTC (WBTC) is a 1:1 Bitcoin-backed asset designed for seamless DeFi integration and high-speed trading.",
-                chartH: "<i class='fas fa-chart-line text-green-500 mr-2'></i> Live Market Data (GeckoTerminal)",
-                btnTrade: "Trade Now",
-                btnDocs: "Documentation",
-                featTitle: "Core Features",
-                f1h: "Transferable", f1p: "Full BEP-20 compatibility for fast wallet transfers.",
-                f2h: "Withdrawable", f2p: "Easy burn-to-withdraw mechanism to get real BTC.",
-                f3h: "Valuable", f3p: "Backed by verified BTC reserves for price stability.",
-                f4h: "Accessible", f4p: "Open for anyone to integrate via Offchain Market."
+                heroTitle: "The Secure Bridge for <br><span class='gradient-text'>Bitcoin on BNB Chain</span>",
+                heroDesc: "Token Wrapped BTC (WBTC) is a 1:1 Bitcoin-backed asset. We combine the value of BTC with the efficiency of the BNB Smart Chain network.",
+                chartH: "LIVE MARKET DATA",
+                btnTrade: "Trade on GeckoTerminal",
+                btnDocs: "GitHub Documentation",
+                featTitle: "Why Token Wrapped BTC?",
+                f1h: "Liquid", f1p: "High liquidity for large-scale trading and OTC transactions via Offchain Market.",
+                f2h: "Secure", f2p: "Built on audited OpenZeppelin standards ensuring maximum safety for holders.",
+                f3h: "Verified", f3p: "Fully verified source code on BscScan for 100% on-chain transparency.",
+                f4h: "Low Fee", f4p: "Enjoy the lowest transaction fees compared to the native Bitcoin network."
             },
             id: {
-                heroTitle: "Cara Aman Menyimpan <br><span class='gradient-text'>Bitcoin di BSC</span>",
-                heroDesc: "Token Wrapped BTC (WBTC) adalah aset yang didukung BTC 1:1, dirancang untuk integrasi DeFi dan perdagangan cepat.",
-                chartH: "<i class='fas fa-chart-line text-green-500 mr-2'></i> Data Pasar Langsung (GeckoTerminal)",
-                btnTrade: "Mulai Trading",
-                btnDocs: "Dokumentasi",
-                featTitle: "Fitur Utama",
-                f1h: "Transferable", f1p: "Kompatibilitas BEP-20 penuh untuk pengiriman dompet yang cepat.",
-                f2h: "Withdrawable", f2p: "Mekanisme burn-to-withdraw mudah untuk mendapatkan BTC asli.",
-                f3h: "Valuable", f3p: "Didukung cadangan BTC terverifikasi untuk stabilitas harga.",
-                f4h: "Accessible", f4p: "Terbuka bagi siapa saja untuk integrasi melalui Offchain Market."
+                heroTitle: "Jembatan Aman Untuk <br><span class='gradient-text'>Bitcoin di Jaringan BNB</span>",
+                heroDesc: "Token Wrapped BTC (WBTC) adalah aset yang didukung BTC 1:1. Kami menggabungkan nilai BTC dengan efisiensi jaringan BNB Smart Chain.",
+                chartH: "DATA PASAR LANGSUNG",
+                btnTrade: "Trade di GeckoTerminal",
+                btnDocs: "Dokumentasi GitHub",
+                featTitle: "Mengapa Token Wrapped BTC?",
+                f1h: "Likuid", f1p: "Likuiditas tinggi untuk perdagangan skala besar dan transaksi OTC melalui Offchain Market.",
+                f2h: "Aman", f2p: "Dibangun dengan standar OpenZeppelin yang teraudit untuk keamanan maksimal pemegang token.",
+                f3h: "Terverifikasi", f3p: "Kode sumber terverifikasi sepenuhnya di BscScan untuk transparansi on-chain 100%.",
+                f4h: "Biaya Rendah", f4p: "Nikmati biaya transaksi terendah dibandingkan dengan jaringan asli Bitcoin."
             }
         };
 
@@ -165,18 +166,14 @@
             const lang = e.target.value;
             document.getElementById('hero-title').innerHTML = content[lang].heroTitle;
             document.getElementById('hero-desc').innerText = content[lang].heroDesc;
-            document.getElementById('chart-heading').innerHTML = content[lang].chartH;
+            document.getElementById('chart-h').innerHTML = `<span class="relative flex h-3 w-3 mr-3"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span><span class="relative inline-flex rounded-full h-3 w-3 bg-green-500"></span></span> ${content[lang].chartH}`;
             document.getElementById('btn-trade').innerText = content[lang].btnTrade;
             document.getElementById('btn-docs').innerText = content[lang].btnDocs;
             document.getElementById('feat-title').innerText = content[lang].featTitle;
-            document.getElementById('feat-1-h').innerText = content[lang].f1h;
-            document.getElementById('feat-1-p').innerText = content[lang].f1p;
-            document.getElementById('feat-2-h').innerText = content[lang].f2h;
-            document.getElementById('feat-2-p').innerText = content[lang].f2p;
-            document.getElementById('feat-3-h').innerText = content[lang].f3h;
-            document.getElementById('feat-3-p').innerText = content[lang].f3p;
-            document.getElementById('feat-4-h').innerText = content[lang].f4h;
-            document.getElementById('feat-4-p').innerText = content[lang].f4p;
+            document.getElementById('f1h').innerText = content[lang].f1h; document.getElementById('f1p').innerText = content[lang].f1p;
+            document.getElementById('f2h').innerText = content[lang].f2h; document.getElementById('f2p').innerText = content[lang].f2p;
+            document.getElementById('f3h').innerText = content[lang].f3h; document.getElementById('f3p').innerText = content[lang].f3p;
+            document.getElementById('f4h').innerText = content[lang].f4h; document.getElementById('f4p').innerText = content[lang].f4p;
         });
     </script>
 </body>
